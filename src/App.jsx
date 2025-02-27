@@ -17,9 +17,11 @@ import GridPattern from "@/components/magicui/grid-pattern";
 import Meteors from "@/components/magicui/meteors";
 import { Link, animateScroll as scroll } from "react-scroll";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger,} from "@/components/ui/dialog"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,} from "@/components/ui/dropdown-menu"
+
 
 import { DiscordLogoIcon, ArrowRightIcon, CheckIcon, ExclamationTriangleIcon, SketchLogoIcon, Crosshair2Icon, ChatBubbleIcon, BellIcon, PersonIcon, EnvelopeOpenIcon, GlobeIcon, RocketIcon, PlusIcon } from "@radix-ui/react-icons";
-import { Croissant, Triangle, TriangleAlert } from 'lucide-react';
+import { Croissant, Triangle, TriangleAlert, Moon } from 'lucide-react';
 
 
 const reviews = [
@@ -160,6 +162,13 @@ export default function App() {
                 <a href="#reviews"><Button variant="link">Reviews</Button></a>
               </div>
               <a className={isNarrow2 ? 'hidden' : 'block'} target='_blank' href="https://discord.gg/z2XqEpy2YQ"><Button variant="outline" className="ml-auto flex gap-2">Join Discord<DiscordLogoIcon className="ml-1 size-4" /></Button></a>
+              <DropdownMenu>
+                <DropdownMenuTrigger><Button variant="link" className="ml-auto flex gap-2"><Moon className="size-4" /></Button></DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>Light</DropdownMenuItem>
+                  <DropdownMenuItem>Dark</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
               {/*<Button variant="outline" className="ml-auto">Login</Button>*/}
             </div>
           </header>

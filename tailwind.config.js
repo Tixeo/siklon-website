@@ -77,7 +77,7 @@ module.exports = {
         '256': '62rem',
       },
       width: {
-        'screen-minus-40': 'calc(100vw - 34px)',
+        'screen-minus-40': 'calc(100vw - 47px)',
       },
       padding: {
         '57': '57px',
